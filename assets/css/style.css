@@ -1,0 +1,174 @@
+:root {
+  --ink: #16181d;
+  --ink-soft: #5b6070;
+  --rule: #e2e4ea;
+  --rule-strong: #c8ccd6;
+  --bg: #ffffff;
+  --accent: #00274c; /* Michigan blue */
+  --accent-soft: #f2f5f9;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8eaf0;
+    --ink-soft: #9aa1b2;
+    --rule: #2a2e38;
+    --rule-strong: #3d4251;
+    --bg: #14161b;
+    --accent: #9fc3ea;
+    --accent-soft: #1b1f27;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+a:hover { border-bottom-color: var(--accent); }
+
+/* ---- Masthead ---- */
+
+.masthead { margin-bottom: 2.75rem; }
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.6rem;
+}
+
+.tagline {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ---- Meta grid (time, place, organizers) ---- */
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin: 2.25rem 0 2.5rem;
+}
+
+.meta dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.3rem;
+}
+
+.meta dd { margin: 0; }
+.meta dd + dd { margin-top: 0.15rem; }
+
+.affil { color: var(--ink-soft); font-size: 0.9em; }
+
+/* ---- Prose ---- */
+
+section + section { margin-top: 3rem; }
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.9rem;
+}
+
+p { margin: 0 0 1rem; }
+p:last-child { margin-bottom: 0; }
+
+/* ---- Schedule table ---- */
+
+.table-scroll { overflow-x: auto; margin: 0 -1.5rem; padding: 0 1.5rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead th {
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0 0.9rem 0.6rem 0;
+  border-bottom: 1px solid var(--rule-strong);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 0.85rem 0.9rem 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+tbody tr:hover { background: var(--accent-soft); }
+
+td.date { white-space: nowrap; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+td.speaker { font-weight: 500; width: 34%; }
+td.speaker .affil { display: block; font-weight: 400; line-height: 1.35; margin-top: 0.15rem; }
+td.title { font-family: var(--serif); }
+td.title .tbd { color: var(--ink-soft); font-style: italic; }
+
+tr.past td { opacity: 0.6; }
+
+/* ---- Footer ---- */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+footer p { margin: 0; }
+
+@media (max-width: 34rem) {
+  .wrap { padding-top: 3rem; }
+  table { font-size: 0.9rem; }
+  td.speaker { width: auto; }
+}

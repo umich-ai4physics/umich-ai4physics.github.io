@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<header class="masthead">
+  <p class="eyebrow">{{ site.subtitle }} &middot; {{ site.seminar.term }}</p>
+  <h1>{{ site.title }}</h1>
+  <p class="tagline">{{ site.description }}</p>
+</header>
+
+<dl class="meta">
+  <div>
+    <dt>Time</dt>
+    <dd>{{ site.seminar.when }}</dd>
+  </div>
+  <div>
+    <dt>Location</dt>
+    <dd>{{ site.seminar.where }}</dd>
+  </div>
+  <div>
+    <dt>Organizers</dt>
+    {% for o in site.organizers %}
+    <dd>
+      {% if o.url %}<a href="{{ o.url }}">{{ o.name }}</a>{% else %}{{ o.name }}{% endif %}
+      {% if o.affiliation %}<span class="affil">({{ o.affiliation }})</span>{% endif %}
+    </dd>
+    {% endfor %}
+  </div>
+  {% if site.seminar.contact %}
+  <div>
+    <dt>Contact</dt>
+    <dd><a href="mailto:{{ site.seminar.contact }}">{{ site.seminar.contact }}</a></dd>
+  </div>
+  {% endif %}
+  {% if site.seminar.calendar %}
+  <div>
+    <dt>Calendar</dt>
+    <dd><a href="{{ site.seminar.calendar }}">Add to your calendar</a></dd>
+  </div>
+  {% endif %}
+</dl>
+
+<section>
+  <h2>About</h2>
+  <p>
+    AI is reshaping how physics is done: from model building, data analysis, physical inference, and even the processes by which knowledge is disseminated and passed-down. This seminar seeks to bring together researchers across physics (broadly defined) to discuss AI methodologies that are moving science forward, and the opportunities and challenges they bring.
+  </p>
+  <p>
+    Talks are aimed at a broad physics audience, with a solid Q&A afterward moderated by the organizers.
+  </p>
+</section>
+
+<section>
+  <h2>Schedule</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Speaker</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% assign talks = site.data.speakers | sort: "date" %}
+        {% for talk in talks %}
+        {% assign talk_date = talk.date | date: "%s" | plus: 0 %}
+        {% assign today = site.time | date: "%s" | plus: 0 %}
+        <tr{% if talk_date < today %} class="past"{% endif %}>
+          <td class="date">{{ talk.date | date: "%b %-d" }}</td>
+          {% if talk.note %}
+          <td class="title" colspan="2"><span class="tbd">{{ talk.note }}</span></td>
+          {% else %}
+          <td class="speaker">
+            {% if talk.url %}<a href="{{ talk.url }}">{{ talk.name }}</a>{% else %}{{ talk.name }}{% endif %}
+            {% if talk.affiliation %}<span class="affil">{{ talk.affiliation }}</span>{% endif %}
+          </td>
+          <td class="title">
+            {% if talk.title %}
+              {% if talk.abstract_url %}<a href="{{ talk.abstract_url }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+            {% else %}
+              <span class="tbd">TBD</span>
+            {% endif %}
+          </td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

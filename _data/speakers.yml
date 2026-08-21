@@ -1,0 +1,61 @@
+# One entry per seminar. Keep `date` in YYYY-MM-DD form: it drives the
+# displayed date, the ordering, and the dimming of past talks.
+# Optional keys: url (speaker homepage), title, abstract_url, note.
+
+- date: 2026-09-02
+  name: Nick Kern, Yueying Ni, Ming Feng Ho
+  #url: https://example.edu/~one
+  affiliation: University of Michigan
+  title: "Seminar introduction; AI4physics keywords"
+
+- date: 2026-09-16
+  name: Bin Xia
+  affiliation: Georgia Institute of Technology
+  url: https://www.linkedin.com/in/ai4xia/
+  title: "TBD"
+
+- date: 2026-09-30
+  name: TBD
+  #url:
+  #affiliation:
+  title: "TBD"
+
+- date: 2026-10-14
+  name: TBD
+  #url:
+  #affiliation:
+  title: "TBD"
+
+- date: 2026-10-28
+  name: TBD
+  #url:
+  #affiliation:
+  title: "TBD"
+
+- date: 2026-11-11
+  name: TBD
+  #url:
+  #affiliation:
+  title: "TBD"
+
+- date: 2026-11-18
+  name: TBD
+  #url:
+  #affiliation:
+  title: "TBD"
+
+- date: 2026-12-02
+  name: Francisco Villaescusa-Navarro
+  url: https://franciscovillaescusa.github.io/
+  affiliation: Center for Computational Astrophysics, Flatiron Institute
+  title: "TBD"
+
+- date: 2026-12-16
+  name: Yuan-Sen Ting
+  url: https://www.ysting.space/
+  affiliation: Dept. of Astronomy, The Ohio State University
+  title: "TBD"
+
+- date: 2026-12-16
+  note: "No seminar — fall break"
+

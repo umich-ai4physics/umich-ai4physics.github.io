@@ -1,0 +1,40 @@
+# Site settings
+title: AI for Physics Seminar
+subtitle: University of Michigan
+description: >-
+  A seminar series at the University of Michigan on machine learning and
+  artificial intelligence for physics (e.g. astronomy, cosmology, high-energy, applied physics).
+url: "https://USERNAME.github.io"
+baseurl: "/umich-ai4physics"
+
+# Seminar details (edit these — they render in the header block).
+# `contact` and `calendar` are optional: comment either out to drop it from the page.
+seminar:
+  when: "Bi-weekly, Wednesdays from 10:00--11:00 am"
+  where: "340 West Hall"
+  term: "Fall 2026"
+  #contact: "nkern@umich.edu"
+  #calendar: "" # optional link to a Google Calendar / ICS feed
+
+organizers:
+  - name: "Nick Kern"
+    url: "https://nkern.github.io/"
+    affiliation: "Physics"
+  - name: "Ming Feng Ho"
+    url: "https://jibancat.github.io/"
+    affiliation: "Physics"
+  - name: "Yueying Ni"
+    url: "https://yueyingn.github.io/"
+    affiliation: "Physics"
+  - name: "Gus Evrard"
+    affiliation: "Physics"
+    url: "https://lsa.umich.edu/physics/people/faculty/evrard.html"
+
+# Build settings
+plugins: []
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - vendor

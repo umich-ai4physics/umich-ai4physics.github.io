@@ -52,6 +52,10 @@ Both `…/umich-ai4physics` and `…/umich-ai4physics/` reach the site: GitHub P
 answers the prefix without a trailing slash with a 301 to the canonical
 trailing-slash form, so there is nothing to configure for that.
 
-One-time setup: in **Settings → Pages**, set **Source** to **GitHub Actions**,
-and replace the placeholder `url:` in `_config.yml` with the org/user URL
-(`baseurl` should stay `/umich-ai4physics` unless the repo is renamed).
+This requires **Settings → Pages → Source** to be set to **GitHub Actions**
+(already done for this repo); without it the `configure-pages` step fails with
+*Get Pages site failed*.
+
+The published URL is https://umich-ai4physics.github.io/umich-ai4physics/, built
+from `url` + `baseurl` in `_config.yml`; both stay as-is unless the repo moves or
+is renamed.

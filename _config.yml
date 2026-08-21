@@ -5,7 +5,7 @@ description: >-
   A seminar series at the University of Michigan on machine learning and
   artificial intelligence for physics (e.g. astronomy, cosmology, high-energy, applied physics).
 url: "https://umich-ai4physics.github.io"
-baseurl: "/umich-ai4physics"
+baseurl: ""  # org site served at the domain root; no repo path prefix
 
 # Seminar details (edit these — they render in the header block).
 # `contact` and `calendar` are optional: comment either out to drop it from the page.

@@ -31,31 +31,23 @@ Colors, type, and spacing are in [`assets/css/style.css`](assets/css/style.css).
 ## Local preview
 
 ```bash
-bundle install && bundle exec jekyll serve --baseurl ""
+bundle install && bundle exec jekyll serve
 ```
 
-Then open <http://localhost:4000/>.
-
-The `--baseurl ""` override serves the site at the server root, so the local URL
-is short and there is no `/umich-ai4physics` prefix to remember. To preview
-exactly as production serves it — under the repo prefix, which is worth doing
-once before a release to catch any hard-coded `/path` links — drop the override
-and open <http://localhost:4000/umich-ai4physics/>. Note that WEBrick, unlike
-GitHub Pages, does not redirect the prefix without its trailing slash.
+Then open <http://localhost:4000/>, which matches how production serves the
+site: `baseurl` is empty, so there is no path prefix in either place.
 
 ## Deployment
 
 Pushing to `main` triggers [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
 which builds the site and publishes it to GitHub Pages.
 
-Both `…/umich-ai4physics` and `…/umich-ai4physics/` reach the site: GitHub Pages
-answers the prefix without a trailing slash with a 301 to the canonical
-trailing-slash form, so there is nothing to configure for that.
-
 This requires **Settings → Pages → Source** to be set to **GitHub Actions**
 (already done for this repo); without it the `configure-pages` step fails with
 *Get Pages site failed*.
 
-The published URL is https://umich-ai4physics.github.io/umich-ai4physics/, built
-from `url` + `baseurl` in `_config.yml`; both stay as-is unless the repo moves or
-is renamed.
+Because the repo is named `umich-ai4physics.github.io`, it is an organization
+site and is published at https://umich-ai4physics.github.io/ — the domain root,
+with no repo path. That is why `baseurl` in `_config.yml` is empty; renaming the
+repo to anything else would make it a project site again and `baseurl` would
+have to become `/<repo-name>`.

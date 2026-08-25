@@ -3,9 +3,14 @@ layout: default
 ---
 
 <header class="masthead">
-  <p class="eyebrow">{{ site.subtitle }} &middot; {{ site.seminar.term }}</p>
-  <h1>{{ site.title }}</h1>
-  <p class="tagline">{{ site.description }}</p>
+  <div class="masthead-text">
+    <p class="eyebrow">{{ site.subtitle }} &middot; {{ site.seminar.term }}</p>
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.description }}</p>
+  </div>
+  {% if site.logo %}
+  <img class="masthead-logo" src="{{ site.logo | relative_url }}" alt="" width="1254" height="1254">
+  {% endif %}
 </header>
 
 <dl class="meta">
@@ -46,7 +51,7 @@ layout: default
     AI is reshaping how physics is done: from model building, data analysis, parameter inference, and even the processes by which knowledge is disseminated and passed-down. This seminar seeks to bring together researchers across physics (broadly defined) to discuss AI methodologies that are moving science forward, and the opportunities and challenges they bring.
   </p>
   <p>
-    Talks are aimed at a broad physics audience, with a solid Q&A afterward moderated by the organizers.
+    Talks are aimed at a broad physics audience, with a solid Q&A afterward moderated by the organizers. We graciously acknowledge support from the Leinweber Institute for Theoretical Physics (LITP).
   </p>
 </section>
 

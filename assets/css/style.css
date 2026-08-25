@@ -52,7 +52,22 @@ a:hover { border-bottom-color: var(--accent); }
 
 /* ---- Masthead ---- */
 
-.masthead { margin-bottom: 2.75rem; }
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.masthead-text { flex: 1 1 auto; min-width: 0; }
+
+.masthead-logo {
+  flex: 0 0 auto;
+  width: clamp(10rem, 35%, 18rem);
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
 
 .eyebrow {
   font-size: 0.75rem;
@@ -166,6 +181,16 @@ footer {
   color: var(--ink-soft);
 }
 footer p { margin: 0; }
+
+/* Stack once the square mark starts squeezing the title. */
+@media (max-width: 40rem) {
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .masthead-logo { order: -1; width: 12rem; }
+}
 
 @media (max-width: 34rem) {
   .wrap { padding-top: 3rem; }

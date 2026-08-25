@@ -6,6 +6,7 @@ description: >-
   artificial intelligence for physics (e.g. astronomy, cosmology, high-energy, applied physics).
 url: "https://umich-ai4physics.github.io"
 baseurl: ""  # org site served at the domain root; no repo path prefix
+logo: "/assets/img/logo_small.jpg"  # mark beside the title; comment out to hide
 
 # Seminar details (edit these — they render in the header block).
 # `contact` and `calendar` are optional: comment either out to drop it from the page.

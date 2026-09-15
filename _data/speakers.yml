@@ -1,6 +1,15 @@
 # One entry per seminar. Keep `date` in YYYY-MM-DD form: it drives the
 # displayed date, the ordering, and the dimming of past talks.
-# Optional keys: url (speaker homepage), title, abstract_url, note.
+# Optional keys: url (speaker homepage), title, abstract, abstract_url, note.
+#
+# `abstract` shows in a pop-over when hovering, focusing, or tapping the title.
+# It is Markdown, so use a `|` block for anything longer than a line:
+#
+#   abstract: |
+#     First paragraph, wrapped however you like in this file; Markdown
+#     joins the lines back up.
+#
+#     A blank line starts a new paragraph. *Emphasis* and links work.
 
 - date: 2026-09-02
   name: Nick Kern, Yueying Ni, Ming Feng Ho
@@ -13,6 +22,17 @@
   affiliation: Georgia Institute of Technology
   url: https://www.linkedin.com/in/ai4xia/
   title: "Foundation Models for Cosmology and Astrophysics: From General-Purpose AI to Multi-Modal Scientific Models"
+  abstract: |
+    Foundation models have transformed modern AI by learning reusable representations that can be adapted across many tasks,
+    datasets, and data types. Similar ideas are now beginning to enter physics and astrophysics, where scientific information
+    is naturally multimodal and may include images, spectra, time series, simulation outputs, and physical parameters.
+    In this talk, I will first give a pedagogical introduction to the key ideas behind transformers and foundation models,
+    then review several recent efforts in astronomy and cosmology, including AstroCLIP, AstroLLAMA, and AION-1B.
+    I will then discuss our recent work on a multi-modal foundation model for cosmological simulation data,
+    which jointly models heterogeneous galaxy properties and supports flexible cross-modal prediction through masked training.
+    I will conclude with a broader perspective on how foundation-model ideas may enable more general AI systems for
+    scientific inference and prediction, including recent work extending multimodal modeling to plasma state reconstruction
+    from sparse and incomplete observations.
 
 - date: 2026-09-30
   name: Ricardo Vinuesa

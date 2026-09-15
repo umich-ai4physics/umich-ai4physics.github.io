@@ -81,7 +81,16 @@ layout: default
             {% if talk.affiliation %}<span class="affil">{{ talk.affiliation }}</span>{% endif %}
           </td>
           <td class="title">
-            {% if talk.title %}
+            {% if talk.title and talk.abstract %}
+              {% assign abstract_id = "abstract-" | append: forloop.index %}
+              <span class="talk-title has-abstract{% if talk.abstract_url %} is-link{% endif %}">
+                {% if talk.abstract_url %}<a href="{{ talk.abstract_url }}" aria-describedby="{{ abstract_id }}">{{ talk.title }}</a>{% else %}<span tabindex="0" aria-describedby="{{ abstract_id }}">{{ talk.title }}</span>{% endif %}
+              </span>
+              <div class="abstract" id="{{ abstract_id }}" role="tooltip">
+                <p class="abstract-label">Abstract</p>
+                {{ talk.abstract | markdownify }}
+              </div>
+            {% elsif talk.title %}
               {% if talk.abstract_url %}<a href="{{ talk.abstract_url }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
             {% else %}
               <span class="tbd">TBD</span>

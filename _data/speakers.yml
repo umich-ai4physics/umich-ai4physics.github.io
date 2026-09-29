@@ -39,6 +39,24 @@
   url: "https://aero.engin.umich.edu/people/ricardo-vinuesa/"
   affiliation: University of Michigan
   title: "From explainable deep learning to foundation models: discovery and control"
+  abstract: |
+    In this seminar we discuss a unified framework that combines explainable deep learning,
+    deep reinforcement learning (DRL) and foundation models to advance both understanding and control of
+    turbulence, with direct implications for accelerated design and discovery. First, we will show how explainable deep
+    learning techniques can be used to identify the flow features that are truly responsible for key turbulent processes
+    in wall-bounded flows. By systematically interrogating trained neural networks, we uncover the most influential
+    coherent structures driving momentum transport and drag. Our results reveal that classically studied structures
+    (while important) provide only a partial and sometimes misleading perspective, motivating a more data-driven and
+    physics-aware view of turbulence organization. Building on these insights, we will demonstrate how deep reinforcement 
+    learning can be used to actively control turbulent flows by targeting the dynamically relevant structures identified 
+    through explainability. This approach achieves over 30% drag reduction in canonical wall-bounded turbulence and 
+    extends naturally to more complex configurations, including turbulent wings, highlighting the scalability of 
+    learning-based control strategies. Finally, we will introduce a foundation-model-based framework for accelerated design, 
+    optimization and scientific discovery. By learning compact, interpretable latent representations of high-dimensional 
+    flow physics, these models (combined with agentic-AI systems) enable rapid exploration of design spaces, 
+    causal reasoning and closed-loop optimization, bridging the gap between expensive simulations, 
+    control and engineering decision making. Together, these results illustrate how explainable and agentic AI are 
+    becoming essential for turbulence physics, flow control and next-generation engineering design.
 
 - date: 2026-10-14
   name: TBD

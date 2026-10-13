@@ -66,14 +66,14 @@
 
 - date: 2026-11-11
   name: TBD
-  #url:
-  #affiliation:
+  url:
+  affiliation:
   title: "TBD"
 
 - date: 2026-11-18
-  name: TBD
-  #url:
-  #affiliation:
+  name: Jeong Joon Park
+  url: https://jjparkcv.github.io/
+  affiliation: University of Michigan
   title: "TBD"
 
 - date: 2026-12-02

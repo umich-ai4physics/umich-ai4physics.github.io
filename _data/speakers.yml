@@ -62,7 +62,13 @@
   name: Richard Lewis
   url: https://lsa.umich.edu/psych/people/faculty/rickl.html
   affiliation: University of Michigan
-  title: "TBD"
+  title: "Scientific Discovery in AI and Human Minds"
+  abstract: |
+    The last couple of years have seen the emergence of AI systems that perform "end-to-end scientific discovery".
+    I'll survey some of this recent terrain and trace its intellectual heritage to work by Herb Simon and other
+    early AI pioneers  in the 1960s and 70s.  Many of the core principles and controversies of sixty years ago have
+    carried over to today. We'll then take up two key questions: (1) Are there fundamental  limits to what AI models
+    can achieve scientifically (and creatively)? and (2) What's next? 
 
 - date: 2026-11-18
   name: Jeong Joon Park

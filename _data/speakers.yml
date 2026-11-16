@@ -74,7 +74,15 @@
   name: Jeong Joon Park
   url: https://jjparkcv.github.io/
   affiliation: University of Michigan
-  title: "TBD"
+  title: "Beyond Neural Operators Toward Neural Solvers"
+  abstract: |
+    Generative models now produce convincing images and video, but their outputs often break basic physics,
+    and more scale alone is unlikely to fix that. This talk argues for neural solvers: models that use the
+    governing equations to check and correct their own predictions, instead of black-box mappings from inputs
+    to solutions. I first show how diffusion models guided by sparse observations and physics constraints can
+    reconstruct full physical fields from partial data. I then show how networks that learn to correct their
+    errors from the physics residual stay accurate when conditions change. Finally, I combine the two into
+    generative error correction from partial observations, applied to shockwave reconstruction.
 
 - date: 2026-12-02
   name: Francisco Villaescusa-Navarro

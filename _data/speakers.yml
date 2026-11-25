@@ -88,7 +88,22 @@
   name: Francisco Villaescusa-Navarro
   url: https://franciscovillaescusa.github.io/
   affiliation: Center for Computational Astrophysics, Flatiron Institute
-  title: "TBD"
+  title: "Will the next scientific revolution be driven by AI agents?"
+  abstract: |
+    Science advances by formulating and testing hypotheses, collecting and analyzing data, and drawing conclusions—yet
+    much of a scientist’s time is spent on tasks such as coding analyses, writing and revising text, reviewing the
+    literature, and learning new concepts. Can recent advances in AI help reclaim some of that time? In this seminar,
+    I will show how large language models and AI agents may help scientists with these tasks. I will first describe what
+    AI agents are and discuss their applications in science. Next, I will present Denario, a complex, publicly available,
+    multi-AI-agent system designed to function as a research assistant. Developed and evaluated by a diverse team of
+    scientists, mathematicians, and philosophers, Denario is an interdisciplinary tool capable of generating ideas, searching
+    the literature, developing research plans, writing and executing code, crafting plots, and drafting and reviewing
+    scientific papers. I will also present and discuss some of the papers that Denario generated a couple of years ago in
+    disciplines such as astrophysics, biology, biophysics, biomedical informatics, chemistry, machine learning, materials
+    science, mathematical physics, medicine, neuroscience, planetary physics, and quantum physics. I will then present Denario2,
+    designed to generate scientific knowledge at scale by deploying swarms of AI agents that run autonomously for weeks to months.
+    Finally, I will discuss ethical and philosophical aspects of this kind of research and open a discussion about the role of
+    humans in science. 
 
 - date: 2026-12-16
   name: Yuan-Sen Ting
